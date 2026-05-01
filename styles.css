@@ -1,0 +1,198 @@
+:root {
+  --bg: #202022;
+  --surface: #222655;
+  --text: #f00
+  --muted: #54607a;
+  --primary: #2c7be5;
+  --primary-strong: #1e5cc8;
+  --border: #192ff5;
+  --radius:25px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.container {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: #161336;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.brand {
+  font: weight 700;
+  font-size: 1.2rem;
+}
+
+.site-nav {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  color: var(--muted);
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: var(--text);
+}
+
+.hero {
+  padding: 6rem 0 4rem;
+  background: linear-gradient(180deg, hsla(236, 65%, 26%, 0.714) 0%, #5044f7de 100%);
+}
+
+.hero-content {
+  max-width: 640px;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2.5rem, 3vw, 4rem);
+  line-height:2.05;
+}
+
+.hero p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 3rem;
+  padding: 0 1.5rem;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #000000;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: var(--primary-strong);
+}
+
+.button-secondary {
+  background: #444;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 255, 0.7);
+}
+
+.button-secondary:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+}
+
+.info-block,
+.services,
+.contact {
+  padding: 4rem 0;
+}
+
+.info-block h2,
+.services h2,
+.contact h2 {
+  margin: 0 0 1rem;
+  font-size: 2rem;
+}
+
+.info-block p,
+.contact p {
+  max-width: 720px;
+  color: var(--muted);
+}
+
+.card-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.card {
+  padding: 1.75rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 10px 30px rgba(57, 10, 187, 0.308);
+}
+
+.card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.contact {
+  background: var(--surface);
+}
+
+.site-footer {
+  padding: 1.5rem 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 680px) {
+  .site-nav {
+    gap: 1rem;
+  }
+
+  .hero {
+    padding-top: 4rem;
+  }
+}
